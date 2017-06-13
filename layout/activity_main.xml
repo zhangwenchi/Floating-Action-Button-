@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+                android:background="@drawable/homelist"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/multiple_actions"
+        android:layout_marginBottom="25dp"
+        android:background="@color/white_semi_transparent"
+        android:id="@+id/buttonTurn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="读邮件"/>
+    <View
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_semi_transparent"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:onClick="clickShadow"/>
+
+
+    <com.example.zhangwenchi.FAB.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        fab:fab_addButtonColorNormal="@color/yellow"
+        fab:fab_addButtonColorPressed="@color/yellow"
+        fab:fab_addButtonPlusIconColor="@color/half_black"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="16dp">
+
+    </com.example.zhangwenchi.FAB.FloatingActionsMenu>
+
+    <ImageView
+        android:src="@drawable/ic_fab_closed"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:id="@+id/closeAddButton"
+        android:layout_alignBottom="@+id/multiple_actions"
+        android:layout_alignRight="@+id/multiple_actions"
+        android:layout_alignEnd="@+id/multiple_actions"/>
+
+    <ImageView
+        android:src="@drawable/ic_fab_compose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:id="@+id/composeAddButton"
+        android:layout_alignBottom="@+id/multiple_actions"
+        android:layout_alignRight="@+id/multiple_actions"
+        android:layout_alignEnd="@+id/multiple_actions"/>
+</RelativeLayout>
